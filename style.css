@@ -36,12 +36,29 @@ body {
     
 }
 
+.Flex2 {
+    display: flex;
+    align-items: center;
+}
+
+.Botao {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.3em;
+    font-weight: 700;
+    background-color: #c00000;
+    padding: 10px 40px;
+    border: 2px solid #fff;
+    border-radius: 25px;
+}
+
 /*topo do site*/
 #topo {
     position: fixed;
     right: 10px;
     bottom: 10px;
 }
+
 
 
 /* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -78,6 +95,11 @@ nav ul {
     transition: all 0.5s;
 
 }
+
+nav ul li {
+    padding: 20px;
+    border-bottom: 1px solid #a9a9a9;
+}
 #check:checked ~ ul {
     right: 0;
 }
@@ -86,6 +108,58 @@ nav ul li a {
     text-decoration: none;
     color: #fff;
 }
+
+/* DESTAQUE */
+
+main {
+    height: 75vh;
+    background: url(img/img/banner.jpg);
+    background-size: cover;
+    background-position:center ;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+main h1 {
+    font-size: 2.5em;
+}
+ter
+main h2 {
+    font-size: 1em;
+    margin: 20px 0px 50px 0px;
+    
+}
+
+/* Sobre */
+#sobre {
+    padding:50px 0px ;
+    background: url(img/img/background.png);
+    background-size: cover;
+    background-position: center;
+}
+#destaqueSobre {
+    display: none;
+}
+
+#textoSobre {
+    color: #fff;
+    padding:0 10px ;
+}
+
+#textoSobre h2 {
+    margin-bottom: 10px;
+}
+.topicosSobre {
+    margin-top: 20px;
+}
+
+.topicosSobre img {
+    margin-right: 10px;
+}
+
 
 
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -96,7 +170,15 @@ nav ul li a {
     .container {
         max-width: 540px;
     }
+     
+
+    /* Destaque */
+    main h1, main h2 {
+        text-shadow: #0000 0.05em 0.05em 0.05em;
+    }
 }
+
+
 
 /* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 768px){
@@ -104,6 +186,19 @@ nav ul li a {
     /*Layout*/
     .container {
         max-width: 720px;
+    }
+
+    /* Destaque */
+    main {
+        height: 45vh;
+    }
+
+    main h1 {
+        font-size:5.5em ;
+    }
+
+    main h2 {
+        font-size: 2em;
     }
 }
 /*Tablet Landscape >>>>>>>>>>>>>>>> >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -114,6 +209,13 @@ nav ul li a {
     .container {
         max-width: 960px;
     }
+
+    /* Destaque */
+
+    main {
+        height: 70vh;
+    }
+
 }
 
 /* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
@@ -160,8 +262,23 @@ nav ul li a {
     }
 
     nav ul li a:hover{
-        color: #000000;
+        color: #c00000;
     }
+    
+    /* Sobre */
+    #sobre {
+        background-attachment: fixed;
+    }
+
+    #destaqueSobre {
+        display: inline;
+    }
+
+    #destaqueSobre img {
+        border-radius: 50%;
+        margin-right: 50px;
+    }
+
 
 
    
