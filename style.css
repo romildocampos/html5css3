@@ -2,34 +2,169 @@
 Folha de Estilo Projeto One page Site HTML5 E CSS3
 Por Romildo de Campos maio/2022
 */
-
-/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-/* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-@media (min-width: 576px){
-    body {
-        background-color: blue;
-    }
+/* CSS Reset*/
+* {
+    margin: 0;
+    border: 0;
+    padding: 0;
 }
-/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
-
-@media (min-width: 768px){
-    body {
-        background-color: yellow;
-    }
+/* Importação Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=Oswald:wght@400;700&display=swap');
+body {
+    font-family: 'Open Sans', sans-serif;
+font-family: 'Oswald', sans-serif;
 }
+
+
+body {
+    font-size: 1em;
+    font-family:'Open Sans', sans-serif;
+    
+}
+/* Layout*/
+.container {
+    margin: 0 auto;
+    background-color: #dcdcdc;
+}
+
+.Flex {
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+/*topo do site*/
+#topo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+}
+
+
+/* Smartphone Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+/*Cabeçalho*/
+header {
+    height: 60px;
+}
+
+#logo img {
+    width: 128px;
+    height: 128px;
+}
+
+
 /* Smartphone Landscape >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
+@media (min-width: 576px){
+    
+    /*Layout*/
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Tablet Portrait >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+@media (min-width: 768px){
+   
+    /*Layout*/
+    .container {
+        max-width: 720px;
+    }
+}
+/*Tablet Landscape >>>>>>>>>>>>>>>> >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
+
 @media (min-width: 992px){
-    body {
-        background-color:#FF6600;
+   
+    /*Layout*/
+    .container {
+        max-width: 960px;
     }
 }
-/* PC >>>>>>>>>>>>>>>> >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 
+/* PC >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>*/
 @media (min-width: 1200px){
-    body {
-        background-color: red;
+   
+    /*Layout*/
+    .container {
+        max-width: 1140px;
     }
+    /*Layout*/
+    .container {
+        max-width: 1140px;
+    }
+
+    /*cabeçalho*/
+    header {
+        height: 120px;
+    }
+
+    #logo img {
+        width: 128px;
+        height: 128px;
+        margin-top: 30px;
+    }
+
+    label {
+        display: none;
+    }
+
+    nav ul {
+        position: static;
+        height: auto;
+        background-color:transparent ;
+    }
+
+    nav ul li {
+        float: left;
+        border: 0;
+    }
+
+    nav ul li a {
+        color: #343538;
+    }
+
+    nav ul li a:hover{
+        color: #000000;
+    }
+
+
+    #check {
+        display: none;
+    }
+
+    label {
+        font-size: 3em;
+        padding-right: 15px;
+    }
+
+    nav ul {
+        list-style: none;
+        background-color:#343538;
+        height: 100vh;
+        position: fixed;
+        top: 120px;
+        right: -100%;
+        width: 100%;
+        transition:all 0.5s ;
+    }
+
+    #check:checked ~ ul {
+
+        right: 0;
+    }
+
+    nav ul li {
+        padding: 20px;
+        border-bottom: 1px solid #a9a9a9;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+
 }
 
+    
 
